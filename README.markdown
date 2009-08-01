@@ -1,4 +1,5 @@
 # Shoulda generators
+Fork of Shoulda Generator by technicalpickles modified to not generate the layout while generating shoulda_scaffold
 
 One night at a Boston Ruby hackfest, I finally got sick of using the Rails default generators, and then having to twiddle them to meet my needs and tastes. This includes using things like:
 
