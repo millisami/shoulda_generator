@@ -99,11 +99,11 @@ class ShouldaScaffoldGenerator < Rails::Generator::NamedBase
       m.directory(File.join('app/controllers', controller_class_path))
       m.directory(File.join('app/helpers', controller_class_path))
       m.directory(File.join('app/views', controller_class_path, controller_file_name))
-      m.directory(File.join('app/views/layouts', controller_class_path))
+      #m.directory(File.join('app/views/layouts', controller_class_path))
       m.directory(File.join('test/functional', controller_class_path))
       m.directory(File.join('test/unit', class_path))
 
-      m.directory('public/stylesheets/blueprint')
+      #m.directory('public/stylesheets/blueprint')
 
       for view in scaffold_views
         m.template(
@@ -113,11 +113,11 @@ class ShouldaScaffoldGenerator < Rails::Generator::NamedBase
       end
 
       # Layout and stylesheet.
-      m.template("#{templating}/layout.html.#{templating}", File.join('app/views/layouts', controller_class_path, "#{controller_file_name}.html.#{templating}"))
+      #m.template("#{templating}/layout.html.#{templating}", File.join('app/views/layouts', controller_class_path, "#{controller_file_name}.html.#{templating}"))
 
-      %w(print screen ie).each do |stylesheet|
-        m.template("blueprint/#{stylesheet}.css", "public/stylesheets/blueprint/#{stylesheet}.css")
-      end
+#      %w(print screen ie).each do |stylesheet|
+#        m.template("blueprint/#{stylesheet}.css", "public/stylesheets/blueprint/#{stylesheet}.css")
+#      end
 
       m.template(
         'controller.rb', File.join('app/controllers', controller_class_path, "#{controller_file_name}_controller.rb")
